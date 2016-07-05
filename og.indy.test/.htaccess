@@ -1,0 +1,2 @@
+RewriteEngine On    # Turn on the rewriting engine
+RewriteRule    ^/?$   article?id=134433     [NC,L]    # Handle requests for "pet-care"
