@@ -12,11 +12,7 @@
             
             var noAppURL = "http://mobile.vzw.com/indycar";
             
-            // var marketURL = "intent://indy.vzw.com/article?id=11655";
-
-            var urlIntent = "intent://indy.vzw.com/";
-
-            var urlIntentEnding = "#Intent;scheme=http;package=com.vzw.indycar;end";
+            var marketURL = "http://play.google.com/store/apps/details?id=com.vzw.indycar";
             
             var itunesURL = "itms-apps://itunes.apple.com/app/id606905722";
             
@@ -36,39 +32,39 @@
             
             
             
-            // function launchAndroidApp(deepLink) {
+            function launchAndroidApp(deepLink) {
                 
                 
                 
-            //     window.onerror=function() {
+                window.onerror=function() {
                     
-            //         alert('Scheme registration not detected');
+                    alert('Scheme registration not detected');
                     
-            //         window.location = marketURL;
+                    window.location = marketURL;
                     
-            //     }
+                }
                 
-            //     timer = setTimeout(function() {
+                timer = setTimeout(function() {
                                    
-            //                        if (changeLocation) {
+                                   if (changeLocation) {
                                    
-            //                         window.location = marketURL;
+                                    window.location = marketURL;
                                    
-            //                        }
+                                   }
                                    
-            //                        },marketTimeout);
+                                   },marketTimeout);
                                    
-            //                         document.write('<iframe style="display:none" height="0" width="0" id="loader"></iframe>');
-            //                         document.getElementById('loader').src = deepLink;
+                                    document.write('<iframe style="display:none" height="0" width="0" id="loader"></iframe>');
+                                    document.getElementById('loader').src = deepLink;
                                    
-            //                        // causes popup blocked in browser
-            //                        // var win = window.open(deepLink, '_blank');
-            //                        // win.focus();
+                                   // causes popup blocked in browser
+                                   // var win = window.open(deepLink, '_blank');
+                                   // win.focus();
                                    
-            //                        // doesn't work
-            //                        //document.write('<iframe name="app" id="app" height="0" width="0" src="' + deepLink + '"></iframe>');
+                                   // doesn't work
+                                   //document.write('<iframe name="app" id="app" height="0" width="0" src="' + deepLink + '"></iframe>');
                                    
-            // }
+            }
         
         
         
@@ -119,10 +115,6 @@
             if (index >= 0 && index < url.length) {
                 
                 var deepLink = deepLinkBase + url.substring(index);
-
-                var args  = url.substring(index);
-
-                var androidDeepLink = urlIntent + args + urlIntentEnding;
                 
                 
                 
@@ -136,8 +128,7 @@
                     
                     //alert('detected Android of some kind');
                     
-                    // launchAndroidApp(androidDeepLink);
-                    window.location = androidDeepLink;
+                    launchAndroidApp(deepLink);
                     
                     return;
                     
