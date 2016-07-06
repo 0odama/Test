@@ -8,7 +8,7 @@
 # Site settings
 title: Your awesome title
 redirect_from:
- - /article?id=134443
+ - id=134443
 redirect_to:
   - omnigon-cdn.com
 email: your-email@domain.com
